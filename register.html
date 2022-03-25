@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+     <style>
+	.full-page{
+	 height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(login.png);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	}
+	.form-box
+{
+    width:380px;
+	height:480px;
+	position:relative;
+	margin:2% auto;
+	background:rgba(0,0,0,0.3);
+	padding:10px;
+    	overflow: hidden;
+}
+	
+    </style>
+
+</head>
+<body>
+    <form action="login.html">
+<br><br><center>
+<input type="submit" value="Back to Login Page">
+<br><br></center>
+</form>
+    <div class="full-page">
+
+        <div class='login-page'>
+            <div class="form-box">
+                <form class='input-group-register' action="login.html">
+		     <h1 style="color:white;align:center;">Register</h1>
+		     <input type='text'class='input-field'placeholder='Full Name' required><br><br>
+		     <input type='email'class='input-field'placeholder='Email Id' ><br><br>
+		     <input type='password'class='input-field'placeholder='Enter Password' required><br><br>
+		     <input type='password'class='input-field'placeholder='Confirm Password'  required><br><br>
+		     <input type='checkbox'class='check-box'><span>I agree to the terms and                                                   conditions</span>
+                    <button type='submit'class='submit-btn'>Register</button>
+	         </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

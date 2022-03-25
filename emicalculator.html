@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emi Calculation</title>
+     <style>
+	.full-page{
+	 height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(emi.png);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	}
+	.navbar
+	{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+	}
+	</style>
+
+	<script>
+		function setText() {
+			var txt = document.f1.type.value 
+			var tf = document.f1.rate
+			tf.value = txt;
+		}
+
+		function calculate(){
+			var amt=Number(document.f1.amount.value);
+			var interest=Number(document.f1.rate.value);
+			var dur=Number(document.f1.duration.value);
+			interest=amt/interest;
+			dur=dur*12;
+			amt=amt+interest;
+			amt=amt/dur;
+			alert("Total EMI is " +"Rs " +amt);
+		}	
+	</script>
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <h3>
+			<form name="f1" action="demo1.html">
+				<br><br><br><br><br><br>
+				Applicant name   : <input type="text" name="name"><br>
+				Loan amount      : <input type="number" name="amount"><br>
+				Type of Loan     : <input type="radio" id="type1" name="type" value="7" onClick="setText()" /> Home      
+					       <input type="radio" id="type2" name="type" value="9" onClick="setText()" /> Car
+						<input type="radio" id="type3" name="type" value="12" onClick="setText()" /> Personal<br>
+				Rate of interest : <input type="text" id="rate" name="rate" value="Choose type of loan" /><br>
+				Duration:<input type="number" name="duration" min="1" max="25"><br>
+				<input type="button" onClick="calculate()" value="Calculate EMI">
+				<input type="reset" onClick="reset()" value="Reset">
+				<input type="submit" value="home page">
+			</form>
+		</h3>
+        </div>
+</body>
+</html>
